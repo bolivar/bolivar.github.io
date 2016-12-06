@@ -6858,6 +6858,19 @@ header {
   position: relative;
 }
 
+header .row {
+  margin: 0 auto;
+}
+
+header section {
+  max-width: 1120px;
+  margin: 0px auto;
+  padding: 20px 20px;
+  position: relative;
+  background: #FFFFFF;
+  border-radius: 14px;
+}
+
 header .logo img {
   float: left;
   width: 50px;
@@ -6908,12 +6921,13 @@ header nav.main_nav ul li a:hover {
 
 header nav.main_nav ul li .button {
   padding: 0 25px;
+  height: auto;
 }
 
 header .mobile_menu_toggle {
   float: right;
   width: 50px;
-  height: 50px;
+  height: 40px;
   position: relative;
   text-align: left;
   display: none;
@@ -6927,13 +6941,13 @@ header .mobile_menu_toggle span, header .mobile_menu_toggle::before, header .mob
   content: "";
   width: 50px;
   background: #34324A;
-  height: 3px;
+  height: 2px;
   text-align: left;
   position: absolute;
 }
 
 header .mobile_menu_toggle span {
-  top: 24px;
+  top: 20px;
 }
 
 header .mobile_menu_toggle::after {
@@ -6959,8 +6973,10 @@ body {
 
 .page-home .above_fold {
   background: rgba(255, 199, 24, 0.52) url("/assets/img/pattern_bg.jpg") no-repeat center center;
+  background-size: cover;
   z-index: 0;
   position: relative;
+  padding: 60px 0;
 }
 
 .page-home .above_fold .circle {
@@ -7007,48 +7023,35 @@ body {
   background: #FAFAFA;
 }
 
-.page-home .portfolio p.fancy {
+.page-home .portfolio div.fancy {
   text-transform: uppercase;
   color: #414C51;
   font-size: 2.2rem;
   position: relative;
-}
-
-.page-home .portfolio p.fancy::before, .page-home .portfolio p.fancy::after {
-  border-top: 1px solid #ccc;
-  width: 100%;
-}
-
-.page-home .portfolio .fancy {
   margin: 80px 0;
   line-height: 0.5;
   text-align: center;
 }
 
-.page-home .portfolio .fancy span {
-  display: inline-block;
-  position: relative;
-}
-
-.page-home .portfolio .fancy span:before,
-.page-home .portfolio .fancy span:after {
-  content: "";
-  position: absolute;
-  height: 5px;
-  border-bottom: 1px solid #979797;
-  top: 0;
+.page-home .portfolio div.fancy::after {
+  content: '';
+  border-bottom: 1px solid #ccc;
   width: 100%;
-  opacity: .29;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: 1;
 }
 
-.page-home .portfolio .fancy span:before {
-  right: 100%;
-  margin-right: 15px;
-}
-
-.page-home .portfolio .fancy span:after {
-  left: 100%;
-  margin-left: 15px;
+.page-home .portfolio div.fancy p {
+  background-color: #FAFAFA;
+  width: auto;
+  display: inline-block;
+  z-index: 3;
+  padding: 0 20px 0 20px;
+  color: black;
+  position: relative;
+  margin: 0;
 }
 
 .page-home .portfolio .box {
@@ -7137,45 +7140,50 @@ body {
 body .page-about {
   text-align: center;
   background: rgba(255, 199, 24, 0.52) url("/assets/img/pattern_bg.jpg") no-repeat center center;
+  background-size: cover;
 }
 
 body .page-about .above_fold {
   margin-top: 50px;
 }
 
-body .page-about section {
+body .page-about .above_fold section {
   max-width: 1120px;
   margin: 0px auto;
-  padding: 20px 20px;
+  padding: 20px 20px 250px 20px;
   position: relative;
   background: #FFFFFF;
   border-radius: 14px;
 }
 
-body .page-about section .text-wrapper {
+body .page-about .above_fold section .text-wrapper {
   max-width: 650px;
   margin: 0 auto;
   text-align: left;
 }
 
-body .page-about section h2 {
+body .page-about .above_fold section h2 {
   text-align: center;
   text-transform: uppercase;
   margin: 40px 0;
 }
 
-body .page-about section p {
+body .page-about .above_fold section p {
   line-height: 2.6rem;
   font-size: 1.8rem;
 }
 
-body .page-about section .title {
+body .page-about .above_fold section .title {
   margin-top: 40px;
   color: #9DA1B3;
   font-size: 2rem;
 }
 
-body .page-about section button {
+body .page-about .above_fold section .center-block {
+  text-align: center;
+}
+
+body .page-about .above_fold section .center-block button {
   display: block;
   margin: 40px auto 60px;
 }
@@ -7194,6 +7202,7 @@ body {
 body .page-jobs {
   text-align: center;
   background: rgba(255, 199, 24, 0.52) url("/assets/img/pattern_bg.jpg") repeat-y;
+  background-size: cover;
 }
 
 body .page-jobs .above_fold {
@@ -7257,50 +7266,51 @@ body {
 body .page-contact {
   text-align: center;
   background: rgba(255, 199, 24, 0.52) url("/assets/img/pattern_bg.jpg") repeat-y;
+  background-size: cover;
 }
 
 body .page-contact .above_fold {
   margin-top: 50px;
 }
 
-body .page-contact section {
+body .page-contact .above_fold section {
   max-width: 1120px;
   margin: 0px auto;
-  padding: 20px 20px;
+  padding: 20px 20px 100px 20px;
   position: relative;
   background: #FFFFFF;
   border-radius: 14px;
 }
 
-body .page-contact section .text-wrapper {
+body .page-contact .above_fold section .text-wrapper {
   max-width: 650px;
   margin: 0 auto;
   text-align: left;
 }
 
-body .page-contact section h2 {
+body .page-contact .above_fold section h2 {
   text-align: center;
 }
 
-body .page-contact section .contact_form {
+body .page-contact .above_fold section .contact_form {
   max-width: 400px;
   margin: 0 auto;
   text-align: center;
 }
 
-body .page-contact section .contact_form input, body .page-contact section .contact_form label {
+body .page-contact .above_fold section .contact_form input, body .page-contact .above_fold section .contact_form label {
   float: left;
   clear: both;
 }
 
-body .page-contact section .contact_form label {
+body .page-contact .above_fold section .contact_form label {
   text-transform: uppercase;
   color: #9DA1B3;
   font-weight: 100;
   margin: 20px 0 5px 20px;
 }
 
-body .page-contact section .contact_form input {
+body .page-contact .above_fold section .contact_form input {
   padding: 15px 20px;
   border-radius: 25px;
   width: 100%;
@@ -7308,7 +7318,7 @@ body .page-contact section .contact_form input {
   border-width: 1px;
 }
 
-body .page-contact section .contact_form textarea {
+body .page-contact .above_fold section .contact_form textarea {
   width: 100%;
   outline: none;
   border-radius: 25px;
@@ -7330,6 +7340,7 @@ body {
 body .page-skills {
   text-align: center;
   background: rgba(255, 199, 24, 0.52) url("/assets/img/pattern_bg.jpg") repeat-y;
+  background-size: cover;
 }
 
 body .page-skills .above_fold {
@@ -7363,15 +7374,23 @@ body .page-skills section .text-wrapper h3 {
   margin: 40px 0;
 }
 
+body .page-skills section .text-wrapper ul {
+  float: left;
+  width: 100%;
+  padding: 0;
+}
+
 body .page-skills section .text-wrapper ul li {
   list-style: none;
+  text-align: center;
 }
 
 body .page-skills section .text-wrapper ul li img {
-  width: 50px;
+  width: 60px;
   clear: both;
   display: block;
-  margin-bottom: 10px;
+  margin: 0 auto;
+  padding-bottom: 10px;
 }
 
 @-webkit-keyframes swing {
@@ -8681,16 +8700,16 @@ body .page-skills footer {
   .page-home .above_fold h1{
     font-size: 3rem;
   }
-  .page-home .portfolio p.fancy{
+  .page-home .portfolio div.fancy{
     font-size: 1.6rem;
   }
-  body .page-about section{
+  body .page-about .above_fold section{
     max-width: 640px;
   }
   body .page-jobs section{
     max-width: 640px;
   }
-  body .page-contact section{
+  body .page-contact .above_fold section{
     max-width: 640px;
   }
   body .page-skills section{
